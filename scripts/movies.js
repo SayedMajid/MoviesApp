@@ -17,7 +17,7 @@ function searchMovie(){
         return res.json()
     })
     .then(function(res){
-        let data = res
+        let data = res.Search
         console.log(data)
         appendMyData(data)
     })
@@ -37,17 +37,18 @@ function appendMyData(data){
     let imgBox = document.createElement('div')
 
     let img = document.createElement('img')
-    img.src = element.Search.Poster
+    img.src = element.Poster
     img.style.width = '100%'
 
     let title = document.createElement('p')
-    title.textContent = element.Search.Title
+    title.textContent = element.Title
 
     let btn = document.createElement('button')
     btn.textContent = 'Book Now'
     btn.setAttribute('class', 'book_now')
     btn.addEventListener('click', function(){
         nextPage()
+        localStorage.setItem('movie', JSON.stringify(data))
     })
 
     imgBox.append(img)
