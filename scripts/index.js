@@ -9,7 +9,7 @@ function addMoney(){
     wallet.textContent = money
     localStorage.setItem('amount', JSON.stringify(money))
 
-    
+
 }
 
 function goToMovies(){
