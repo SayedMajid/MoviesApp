@@ -9,7 +9,7 @@ document.getElementById('wallet'). textContent = wMoney
 function searchMovie(){
     let movieName = document.getElementById("search").value
     const key = 'c04ee9f4'
-    const url = `http://www.omdbapi.com/?apikey=${key}&s=${movieName}`
+    const url = `https://www.omdbapi.com/?apikey=${key}&s=${movieName}`
 
 
     fetch(url)
